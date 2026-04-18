@@ -27,11 +27,11 @@ const pokemon = defineProps(["name", "xp", "height", "urlImg", "loading"]);
         <hr />
         <div class="row text-center">
           <section class="col">
-            <strong>XP:</strong>
+            <strong>XP: </strong>
             <span>{{ pokemon.xp }}</span>
           </section>
           <section class="col">
-            <strong>Altura:</strong>
+            <strong>Altura: </strong>
             <span>{{ pokemon.height }}</span>
           </section>
         </div>
