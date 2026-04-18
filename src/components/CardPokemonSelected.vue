@@ -13,14 +13,12 @@ const pokemon = defineProps(["name", "xp", "height", "urlImg", "loading"]);
         :src="pokemon.urlImg"
         class="card-img-top pt-2"
         :alt="pokemon.name"
-        height="250"
       />
       <img
         v-else
         src="../assets/pokemon (1).png"
         class="card-img-top pt-2"
         alt="..."
-        height="250"
       />
       <div class="card-body">
         <h5 class="card-title text-center">{{ pokemon.name || "???" }}</h5>
@@ -54,5 +52,19 @@ const pokemon = defineProps(["name", "xp", "height", "urlImg", "loading"]);
     rgba(9, 9, 121, 1) 35%,
     rgba(0, 212, 255, 1) 100%
   );
+}
+
+.CardPokemonSelected img {
+  height: 250px;
+}
+
+@media (max-width: 600px) {
+  .CardPokemonSelected {
+    height: 30vh;
+  }
+
+  .CardPokemonSelected img {
+    height: 200px;
+  }
 }
 </style>
