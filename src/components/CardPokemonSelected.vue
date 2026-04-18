@@ -58,7 +58,7 @@ const pokemon = defineProps(["name", "xp", "height", "urlImg", "loading"]);
   height: 250px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .CardPokemonSelected {
     height: 30vh;
   }

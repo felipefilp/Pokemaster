@@ -33,10 +33,10 @@ const pesquisarPokemon = async (url) => {
   await fetch(url)
     .then((res) => res.json())
     .then((res) => (pokemonSelected.value = res))
-    .catch(err => alert(err))
-    .finally(()=>{
+    .catch((err) => alert(err))
+    .finally(() => {
       loading.value = false;
-    })
+    });
   console.log(pokemonSelected.value);
 };
 </script>
@@ -89,5 +89,11 @@ const pesquisarPokemon = async (url) => {
   overflow-y: scroll;
   overflow-x: hidden;
   max-height: 75vh;
+}
+
+@media (max-width: 768px) {
+  .card-list {
+    max-height: 40vh;
+  }
 }
 </style>
